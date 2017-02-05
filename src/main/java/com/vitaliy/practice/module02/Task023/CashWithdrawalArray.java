@@ -10,13 +10,13 @@ public class CashWithdrawalArray {
         String[] ownerNames = {"Jane", "Ann", "Jack", "Oww", "Lane"};
 
         String ownerName = "Ann";
-        double withdrawal = 100;
+        int withdrawal = 100;
         CashWithdrawalArray transationByName = new CashWithdrawalArray();
 
         transationByName.cashTransaction(balances,ownerNames,ownerName,withdrawal);
     }
 
-    public void cashTransaction(int[] balances, String[] ownerNames, String ownerName, double summWithdrawal) {
+    public void cashTransaction(int[] balances, String[] ownerNames, String ownerName, int summWithdrawal) {
         int[] allBalances = balances;
         String[] allOwnerNames = ownerNames;
         double summ = summWithdrawal;
