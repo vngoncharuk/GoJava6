@@ -10,14 +10,6 @@ public class ArrayModificator {
         //double[] simpleArray = {2, 5, -1, 10, -6, 15, -4, -3, 18, -1};
         int[] simpleArray = {2, 5, -1, 10, -6, 15, -4, -3, 18, -1};
 
-        ArrayModificator sumArray = new ArrayModificator();
-        ArrayModificator minFromArray = new ArrayModificator();
-        ArrayModificator maxFromArray = new ArrayModificator();
-        ArrayModificator maxPositiveFromArray = new ArrayModificator();
-        ArrayModificator multiplicationOfArray = new ArrayModificator();
-        ArrayModificator modulusOfFirstAndLastEllementOfArray = new ArrayModificator();
-        ArrayModificator secondLargestInArray = new ArrayModificator();
-
         ArrayModificator onlyObjectForTest = new ArrayModificator();
 
         onlyObjectForTest.sumAllElementsInArray(simpleArray);
