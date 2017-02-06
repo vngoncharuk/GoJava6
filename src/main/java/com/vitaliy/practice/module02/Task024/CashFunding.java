@@ -23,7 +23,6 @@ public class CashFunding {
         String[] allOwnerNames = ownerNames;
         int summ = summfunding;//person can't withdraw double values
         double totalbalance;
-
         for (int i = 0; i < allOwnerNames.length; i++) {
             if (allOwnerNames[i] == person) {
                 totalbalance = allBalances[i];
@@ -31,8 +30,5 @@ public class CashFunding {
                     System.out.println(person + " " + totalbalance);
                 } else continue;
         }
-
-
     }
-
 }

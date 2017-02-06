@@ -19,15 +19,12 @@ public class CashWithdrawal {
         double summ = summWithdrawal;
         double totalbalance = balance;
         double comiss = 0.05;
-
         comiss *= summ;
-
         if ((comiss + summWithdrawal) < totalbalance) {
             System.out.println("OK " + comiss + " " + (totalbalance - (comiss + summ)));
         } else {
             System.out.println("NO");
         }
-
     }
 
 }

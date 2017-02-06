@@ -14,6 +14,7 @@ public class CashWithdrawalArray {
         CashWithdrawalArray transationByName = new CashWithdrawalArray();
 
         transationByName.cashTransaction(balances,ownerNames,ownerName,withdrawal);
+
     }
 
     public void cashTransaction(int[] balances, String[] ownerNames, String ownerName, int summWithdrawal) {
@@ -22,9 +23,7 @@ public class CashWithdrawalArray {
         double summ = summWithdrawal;
         double totalbalance;
         double comiss = 0.05;
-
         comiss *= summ;
-
         for (int i = 0; i < allOwnerNames.length; i++) {
             if (allOwnerNames[i] == ownerName) {
                 totalbalance = allBalances[i];
