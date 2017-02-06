@@ -16,7 +16,6 @@ public class CashFunding {
         CashFunding fundingTransaction = new CashFunding();
 
         fundingTransaction.cashFunding(balances, ownerNames, ownerName, funding);
-
     }
     public void cashFunding (int[] balances, String[] ownerNames, String person, int summfunding) {
         int[] allBalances = balances;
