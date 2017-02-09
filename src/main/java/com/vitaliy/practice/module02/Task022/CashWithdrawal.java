@@ -13,7 +13,7 @@ public class CashWithdrawal {
 
         transaction.commissionForCash(totalBalance,summWithdrawal);
     }
-    //test comments
+    //test comments 2
     public void commissionForCash(double balance, double summWithdrawal) {
         double summ = summWithdrawal;
         double totalbalance = balance;
