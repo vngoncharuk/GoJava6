@@ -15,7 +15,7 @@ public class CollegeStudent extends Student {
         super(firstName, lastName, group);
     }
 
-    public CollegeStudent(String lastName, Course[] courseTaken) {
+    public CollegeStudent(String lastName, Course... courseTaken) {
         super(lastName, courseTaken);
     }
 

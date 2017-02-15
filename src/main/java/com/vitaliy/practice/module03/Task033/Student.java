@@ -19,7 +19,7 @@ public class Student {
         this.group = group;
     }
 
-    public Student(String lastName, Course[] courseTaken) {
+    public Student(String lastName, Course... courseTaken) {
         this.lastName = lastName;
         this.courseTaken = courseTaken;
     }
