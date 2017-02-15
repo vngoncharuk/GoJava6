@@ -35,6 +35,5 @@ public class Bird {
             System.out.println(FLYING);
             System.out.println(SELFCONSCIOUSNESS);
         }
-
     }
 }
