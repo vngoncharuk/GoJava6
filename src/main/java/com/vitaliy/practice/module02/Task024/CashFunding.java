@@ -13,6 +13,7 @@ public class CashFunding {
         String ownerName = "Oww";
         int funding = 100;
 
+
         CashFunding fundingTransaction = new CashFunding();
 
         fundingTransaction.cashFunding(balances, ownerNames, ownerName, funding);
