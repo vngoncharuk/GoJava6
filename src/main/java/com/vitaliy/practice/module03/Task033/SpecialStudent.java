@@ -18,4 +18,20 @@ public class SpecialStudent extends CollegeStudent{
     public SpecialStudent(String lastName, Course[] courseTaken) {
         super(lastName, courseTaken);
     }
+
+    public long getSecretKey() {
+        return secretKey;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setSecretKey(long secretKey) {
+        this.secretKey = secretKey;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }

@@ -4,10 +4,10 @@ package com.vitaliy.practice.module03.Task031;
  * Created by vitaliy on 13.02.2017.
  */
 public class Bird {
-    private final String WALKING = "I am walking";
-    private final String SINGING = "I am flying";
-    private final String FLYING = "I am singing";
-    private final String SELFCONSCIOUSNESS = "I am a Bird";
+    private static final String SINGING = "I am walking\n" +
+            "I am flying\n" +
+            "I am singing\n" +
+            "I am Bird";
     private String name;
 
     public static void main(String[] args) {
@@ -23,17 +23,9 @@ public class Bird {
         this.name = name;
     }
     public void sing() {
-        if (name == null) {
-            System.out.println(WALKING);
-            System.out.println(SINGING);
-            System.out.println(FLYING);
-            System.out.println(SELFCONSCIOUSNESS);
-        } else {
+        if (name != null) {
             System.out.println("I am a " + name);
-            System.out.println(WALKING);
-            System.out.println(SINGING);
-            System.out.println(FLYING);
-            System.out.println(SELFCONSCIOUSNESS);
         }
+        System.out.println(SINGING);
     }
 }

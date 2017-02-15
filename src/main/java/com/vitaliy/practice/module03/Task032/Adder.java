@@ -6,10 +6,6 @@ package com.vitaliy.practice.module03.Task032;
 public class Adder extends Arithmetic {
 
     static boolean check(Integer a, Integer b) {
-        boolean result = true;
-        if (a>=b) {
-            return result;
-        } else result = false;
-        return result;
+          return a>=b;
     }
 }
