@@ -6,31 +6,34 @@ import com.vitaliy.practice.module04.Task042.Currency;
  * Created by vitaliy on 19.02.2017.
  */
 public abstract class Bank {
-    long id;
-    String bankCountry;
-    Currency currency;
-    int numberOfEmployees;
-    double avrSalaryOfEmployee;
-    long rating;
-    long totalCapital;
+    private long id;
+    private String bankCountry;
+    private Currency currency;
+    private int numberOfEmployees;
+    private double avrSalaryOfEmployee;
+    private long rating;
+    private long totalCapital;
 
-    public Bank(long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
-        this.id = id;
-        this.bankCountry = bankCountry;
-        this.currency = currency;
-        this.numberOfEmployees = numberOfEmployees;
-        this.avrSalaryOfEmployee = avrSalaryOfEmployee;
-        this.rating = rating;
-        this.totalCapital = totalCapital;
+        public Bank(long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
+            this.id = id;
+            this.bankCountry = bankCountry;
+            this.currency = currency;
+            this.numberOfEmployees = numberOfEmployees;
+            this.avrSalaryOfEmployee = avrSalaryOfEmployee;
+            this.rating = rating;
+            this.totalCapital = totalCapital;
+        }
+
+    public Bank() {
     }
 
-    public abstract int getLimitOfWithdrawal();
+    public abstract int getLimitOfWithdrawal(Currency currency);
 
-    public abstract int getLimitOfFunding();
+        public abstract int getLimitOfFunding(Currency currency);
 
-    public abstract int getMonthlyRate();
+        public abstract double getMonthlyRate(Currency currency);
 
-    public abstract int getCommission(int summ);
+    public abstract double getCommission(Currency currency, int summ);
 
     public double moneyPaidMonthlyForSalary(int salary){
          return salary;
