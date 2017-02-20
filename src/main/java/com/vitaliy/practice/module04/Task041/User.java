@@ -1,6 +1,4 @@
-package com.vitaliy.practice.module04.Task044;
-
-import com.vitaliy.practice.module04.Task041.USBank;
+package com.vitaliy.practice.module04.Task041;
 
 /**
  * Created by vitaliy on 19.02.2017.
@@ -12,7 +10,9 @@ public class User {
     private int monthsOfEmployment;
     private String companyName;
     private int salary;
-    private USBank bank ;
+    private USBank bankUS;
+    private EUBank bankEU;
+    private ChinaBank bankChina;
 
     @Override
     public String toString() {
@@ -67,11 +67,27 @@ public class User {
         this.salary = salary;
     }
 
-    public USBank getBank() {
-        return bank;
+    public USBank getBankUS() {
+        return bankUS;
     }
 
-    public void setBank(USBank bank) {
-        this.bank = bank;
+    public void setBankUS(USBank bankUS) {
+        this.bankUS = bankUS;
+    }
+
+    public EUBank getBankEU() {
+        return bankEU;
+    }
+
+    public void setBankEU(EUBank bankEU) {
+        this.bankEU = bankEU;
+    }
+
+    public ChinaBank getBankChina() {
+        return bankChina;
+    }
+
+    public void setBankChina(ChinaBank bankChina) {
+        this.bankChina = bankChina;
     }
 }
