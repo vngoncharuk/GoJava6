@@ -6,16 +6,16 @@ import com.vitaliy.practice.module04.Task042.Currency;
  * Created by vitaliy on 19.02.2017.
  */
 public class USBank extends Bank {
-    public static final int LIMIT_WITHDRAWAL_USD = 1000;
-    public static final int LIMIT_WITHDRAWAL_EUR = 1200;
-    public static final int LIMIT_FUNDING_USD = 0;
-    public static final int LIMIT_FUNDING_EUR = 10000;
-    public static final double MONTH_RATE_USD = 0.01;
-    public static final double MONTH_RATE_EUR = 0.02;
-    public static final double WITHDRAW_COMMISS_USD_LESS_1000 = 0.05;
-    public static final double WITHDRAW_COMMISS_USD_MORE_1000 = 0.07;
-    public static final double WITHDRAW_COMMISS_EUR_LESS_1000 = 0.06;
-    public static final double WITHDRAW_COMMISS_EUR_MORE_1000 = 0.08;
+    private static final int LIMIT_WITHDRAWAL_USD = 1000;
+    private static final int LIMIT_WITHDRAWAL_EUR = 1200;
+    private static final int LIMIT_FUNDING_USD = 0;
+    private static final int LIMIT_FUNDING_EUR = 10000;
+    private static final double MONTH_RATE_USD = 0.01;
+    private static final double MONTH_RATE_EUR = 0.02;
+    private static final double WITHDRAW_COMMISS_USD_LESS_1000 = 0.05;
+    private static final double WITHDRAW_COMMISS_USD_MORE_1000 = 0.07;
+    private static final double WITHDRAW_COMMISS_EUR_LESS_1000 = 0.06;
+    private static final double WITHDRAW_COMMISS_EUR_MORE_1000 = 0.08;
 
     public USBank(long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
         super(id, bankCountry, currency, numberOfEmployees, avrSalaryOfEmployee, rating, totalCapital);

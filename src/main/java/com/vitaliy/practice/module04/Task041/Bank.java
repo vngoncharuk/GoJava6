@@ -14,14 +14,14 @@ public abstract class Bank {
     private long rating;
     private long totalCapital;
 
-        public Bank(long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
-            this.id = id;
-            this.bankCountry = bankCountry;
-            this.currency = currency;
-            this.numberOfEmployees = numberOfEmployees;
-            this.avrSalaryOfEmployee = avrSalaryOfEmployee;
-            this.rating = rating;
-            this.totalCapital = totalCapital;
+    public Bank(long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
+        this.id = id;
+        this.bankCountry = bankCountry;
+        this.currency = currency;
+        this.numberOfEmployees = numberOfEmployees;
+        this.avrSalaryOfEmployee = avrSalaryOfEmployee;
+        this.rating = rating;
+        this.totalCapital = totalCapital;
         }
 
     public Bank() {
@@ -29,9 +29,9 @@ public abstract class Bank {
 
     public abstract int getLimitOfWithdrawal(Currency currency);
 
-        public abstract int getLimitOfFunding(Currency currency);
+    public abstract int getLimitOfFunding(Currency currency);
 
-        public abstract double getMonthlyRate(Currency currency);
+    public abstract double getMonthlyRate(Currency currency);
 
     public abstract double getCommission(Currency currency, int summ);
 
