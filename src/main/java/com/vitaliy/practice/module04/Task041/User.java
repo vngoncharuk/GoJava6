@@ -5,18 +5,26 @@ package com.vitaliy.practice.module04.Task041;
  */
 public class User {
     private long id;
-    private String name;
+    private String  name;
     private double balance;
     private int monthsOfEmployment;
     private String companyName;
     private int salary;
-    private USBank bankUS;
-    private EUBank bankEU;
-    private ChinaBank bankChina;
+    private Bank bank;
+
+    public User(long id, String name, String companyName, int salary, Bank bank, double balance) {
+        this.id = id;
+        this.name = name;
+        this.companyName = companyName;
+        this.balance = balance;
+        this.salary = salary;
+        this.bank = bank;
+    }
 
     @Override
     public String toString() {
-        return super.toString();
+        return "Id of person: " + this.id + ";\nName: " + this.name + ";\nCompany name: " + this.companyName +
+        ";\nSalary: " + this.salary + ";\nBank: " + this.bank + "\nBalance: " + this.balance + ".";
     }
 
     public long getId() {
@@ -67,27 +75,11 @@ public class User {
         this.salary = salary;
     }
 
-    public USBank getBankUS() {
-        return bankUS;
+    public Bank getBank() {
+        return bank;
     }
 
-    public void setBankUS(USBank bankUS) {
-        this.bankUS = bankUS;
-    }
-
-    public EUBank getBankEU() {
-        return bankEU;
-    }
-
-    public void setBankEU(EUBank bankEU) {
-        this.bankEU = bankEU;
-    }
-
-    public ChinaBank getBankChina() {
-        return bankChina;
-    }
-
-    public void setBankChina(ChinaBank bankChina) {
-        this.bankChina = bankChina;
+    public void setBank(Bank bank) {
+        this.bank = bank;
     }
 }
