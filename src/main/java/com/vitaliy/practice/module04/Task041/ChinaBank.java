@@ -20,6 +20,11 @@ public class ChinaBank extends Bank {
     }
 
     @Override
+    public String toString() {
+        return "Bank of China";
+    }
+
+    @Override
     public int getLimitOfWithdrawal(Currency currency) {
         if (currency == Currency.USD){
             return LIMIT_WITHDRAWAL_USD;

@@ -20,6 +20,11 @@ public class EUBank extends Bank {
     }
 
     @Override
+    public String toString() {
+        return "EU Bank";
+    }
+
+    @Override
     public int getLimitOfWithdrawal(Currency currency) {
         if (currency == Currency.USD){
             return LIMIT_WITHDRAWAL_USD;
