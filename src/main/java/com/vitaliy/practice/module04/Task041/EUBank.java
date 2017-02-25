@@ -24,37 +24,33 @@ public class EUBank extends Bank {
         return "EU Bank";
     }
 
-    @Override
-    public int getLimitOfWithdrawal(Currency currency) {
-        if (currency == Currency.USD){
+    public int getLimitOfWithdrawal() {
+        if (this.getCurrency() == Currency.USD){
             return LIMIT_WITHDRAWAL_USD;
         }
         return LIMIT_WITHDRAWAL_EUR;
     }
 
-    @Override
-    public int getLimitOfFunding(Currency currency) {
-        if (currency == Currency.USD){
+    public int getLimitOfFunding() {
+        if (this.getCurrency() == Currency.USD){
             return LIMIT_FUNDING_USD;
         }
         return LIMIT_FUNDING_EUR;
     }
 
-    @Override
-    public double getMonthlyRate(Currency currency) {
-        if (currency == Currency.USD){
+    public double getMonthlyRate() {
+        if (this.getCurrency() == Currency.USD){
             return MONTH_RATE_USD;
         }
         return MONTH_RATE_EUR;
     }
 
-    @Override
-    public double getCommission(Currency currency, int summ) {
-        if (currency == Currency.USD && summ <= 1000){
+    public double getCommission(int summ) {
+        if (this.getCurrency() == Currency.USD && summ <= 1000){
             return summ*WITHDRAW_COMMISS_USD_LESS_1000;
-        } else if (currency == Currency.USD && summ > 1000) {
+        } else if (this.getCurrency() == Currency.USD && summ > 1000) {
             return summ*WITHDRAW_COMMISS_USD_MORE_1000;
-        } else if (currency == Currency.EUR && summ <=1000) {
+        } else if (this.getCurrency() == Currency.EUR && summ <=1000) {
             return summ*WITHDRAW_COMMISS_EUR_LESS_1000;
         }
         return summ*WITHDRAW_COMMISS_EUR_MORE_1000;

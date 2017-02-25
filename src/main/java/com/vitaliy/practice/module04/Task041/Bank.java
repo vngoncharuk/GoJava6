@@ -22,20 +22,18 @@ public abstract class Bank {
         this.totalCapital = totalCapital;
         }
 
-    public Bank() {
-    }
 
-    public abstract int getLimitOfWithdrawal(Currency currency);
+    public abstract int getLimitOfWithdrawal();
 
-    public abstract int getLimitOfFunding(Currency currency);
+    public abstract int getLimitOfFunding();
 
-    public abstract double getMonthlyRate(Currency currency);
+    public abstract double getMonthlyRate();
 
-    public abstract double getCommission(Currency currency, int summ);
+    public abstract double getCommission(int summ);
 
     public double moneyPaidMonthlyForSalary(int salary){
          return salary;
-    };
+    }
 
     public long getId() {
         return id;

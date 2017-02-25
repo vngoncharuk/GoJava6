@@ -55,9 +55,6 @@ public class Main{
         bankSystem.transferMoney(user6,user5,100);
         bankSystem.paySalary(user6);
         System.out.println(user6);
-
-
-
     }
 
 }

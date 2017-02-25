@@ -6,11 +6,22 @@ package com.vitaliy.practice.module04.Task041;
 public class BankSystemImpl implements BankSystem {
 
     public void withdrawOfUser(User user, int amount) {
-        user.setBalance(user.getBalance() - amount);
+        Bank bank = user.getBank();
+        double comiss = bank.getCommission(amount);
+        if ((comiss + amount) > bank.getLimitOfWithdrawal()) {
+            System.out.println("Amount of withdrawal is out of limit!");
+        } else {
+            user.setBalance(user.getBalance() - comiss - amount);
+        }
     }
 
     public void fundUser(User user, int amount) {
-        user.setBalance(user.getBalance() + amount);
+        Bank bank = user.getBank();
+        if (amount > bank.getLimitOfFunding()) {
+            System.out.println("Amount of funding is out of limit!");
+        } else {
+            user.setBalance(user.getBalance() + amount);
+        }
     }
 
     public void transferMoney(User fromUser, User toUser, int amount) {
