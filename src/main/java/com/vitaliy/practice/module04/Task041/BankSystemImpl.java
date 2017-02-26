@@ -25,8 +25,14 @@ public class BankSystemImpl implements BankSystem {
     }
 
     public void transferMoney(User fromUser, User toUser, int amount) {
-        fromUser.setBalance(fromUser.getBalance() - amount);
-        toUser.setBalance(toUser.getBalance() + amount);
+        Bank bank1 = fromUser.getBank();
+        Bank bank2 = toUser.getBank();
+        if (bank1.getCurrency() != bank2.getCurrency()){
+            System.out.println("User you are trying send money to doesn't have account with apropriate currency!");
+        } else {
+            fromUser.setBalance(fromUser.getBalance() - amount);
+            toUser.setBalance(toUser.getBalance() + amount);
+        }
     }
 
     public void paySalary(User user) {
