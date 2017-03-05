@@ -12,34 +12,33 @@ public class Controller {
         apis[2] = new TripAdvisorAPI();
     }
 
-    public Room[] requstRooms(int price, int persons, String city, String hotel){
-        Room[] rooms = new Room[1];
+    public Room[] requestRooms(int price, int persons, String city, String hotelName){
+        Room[] rooms = new Room[0];
         for (APIbooking api : apis) {
-            if (api.findRooms(price,persons,city,hotel) != null){
-                System.arraycopy(rooms,0,rooms,0,rooms.length);
+            Room[] apiRooms = api.findRooms(price, persons, city, hotelName);
+            if (apiRooms != null){
+                for (Room room : apiRooms) {
+                    rooms = Room.addRoomFromRequestToArray(rooms, room);
+                }
             }
         }
         return rooms;
     }
 
-//    {
-//        Room[] newArrayOfFindRooms = new Room[0];
-//
-//        for (int i = 0; i < rooms.length; i++) {
-//            Room roomInDb = rooms[i];
-//
-//            if (rooms[i].getPrice() == price && rooms[i].getPersons() == persons && rooms[i].getCityName() == city && rooms[i].getHotelName() == hotel) {
-//                Room.addRoomFromRequestToArray(newArrayOfFindRooms, rooms[i]);
-//            }
-//        }
-//        return newArrayOfFindRooms;
-//    }
+    public Room[] check(APIbooking api1, APIbooking api2){
+        Room[] equalRooms = new Room[0];
 
+        int l1 = api1.getAllRooms().length;
 
-
-    Room[] check(APIbooking api1, APIbooking api2){
-        return null;//доделать
-
+        for (Room room1 : api1.getAllRooms()) {
+            for (Room room2 : api2.getAllRooms()) {
+                if (room1.equals(room2)){
+                    equalRooms = Room.addRoomFromRequestToArray(equalRooms, room1);
+                    equalRooms = Room.addRoomFromRequestToArray(equalRooms, room2);
+                }
+            }
+        }
+        return equalRooms;
     }
 
 }

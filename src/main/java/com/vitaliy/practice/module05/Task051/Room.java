@@ -28,12 +28,6 @@ public class Room {
         return newRooms;
     }
 
-//    public static Room[] addRoomFromRequestToArray(Room[] rooms, Room[] room){
-//        Room[] newRooms = Arrays.copyOf(rooms,rooms.length + 1);
-//        newRooms[newRooms.length - 1] = room[];
-//        return newRooms;
-//    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
