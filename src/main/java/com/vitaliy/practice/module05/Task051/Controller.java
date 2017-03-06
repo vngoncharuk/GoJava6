@@ -28,8 +28,6 @@ public class Controller {
     public Room[] check(APIbooking api1, APIbooking api2){
         Room[] equalRooms = new Room[0];
 
-        int l1 = api1.getAllRooms().length;
-
         for (Room room1 : api1.getAllRooms()) {
             for (Room room2 : api2.getAllRooms()) {
                 if (room1.equals(room2)){
