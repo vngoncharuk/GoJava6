@@ -5,7 +5,7 @@ package com.vitaliy.practice.module05.Task051;
  */
 public class DAObookingImpl implements DAObooking{
 
-    Room[] roomDB = new Room[5];
+    private Room[] roomDB = new Room[5];
 
     public Room save(Room room) {
         int count = getRoomsCount(roomDB);

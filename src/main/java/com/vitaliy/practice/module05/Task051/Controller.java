@@ -4,7 +4,7 @@ package com.vitaliy.practice.module05.Task051;
  * Created by vitaliy on 26.02.2017.
  */
 public class Controller {
-    APIbooking apis [] = new APIbooking[3];
+    private APIbooking apis [] = new APIbooking[3];
 
     {
         apis[0] = new BookingComAPI();

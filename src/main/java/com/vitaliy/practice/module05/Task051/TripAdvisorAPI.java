@@ -4,7 +4,7 @@ package com.vitaliy.practice.module05.Task051;
  * Created by vitaliy on 26.02.2017.
  */
 public class TripAdvisorAPI implements APIbooking {
-    Room[] rooms = new Room[5];
+    private Room[] rooms = new Room[5];
 
     public TripAdvisorAPI() {
         Room room1 = new Room(1,1000,1, "Premier Palace", "Ibiza");
