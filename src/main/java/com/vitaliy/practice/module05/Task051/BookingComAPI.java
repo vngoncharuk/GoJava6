@@ -25,7 +25,7 @@ public class BookingComAPI implements APIbooking {
 
         for (int i=0 ; i < rooms.length; i++) {
             Room roomInDb = rooms[i];
-            if (rooms[i].getPrice() == price && rooms[i].getPersons() == persons && rooms[i].getCityName() == city && rooms[i].getHotelName() == hotelName) {
+            if (rooms[i].getPrice() == price && rooms[i].getPersons() == persons && rooms[i].getCityName().equals(city) && rooms[i].getHotelName().equals(hotelName)) {
                 newArrayOfFindRooms = Room.addRoomFromRequestToArray(newArrayOfFindRooms, roomInDb);
             }
         }
